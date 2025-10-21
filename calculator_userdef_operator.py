@@ -1,37 +1,36 @@
-def add(a,b):
-    return a+b
-def sub(a,b):
-    return a-b
-def mul(a,b):
-    return a*b
-def div(a,b):
-    return a/b
+def add(a, b):
+    return a + b
+
+def sub(a, b):
+    return a - b
+
+def mul(a, b):
+    return a * b
+
+def div(a, b):
+    return a / b
 
 while True:
-    print("1.add")
-    print("2.sub")
-    print("3.mul")
-    print("4.div")
-    print("5.exit")
-    c=int(input("enter the choice(1-5):"))
-    
-    if(c==1):
-        a=int(input("enter a value:"))
-        b=int(input("enter b value:"))
-        print(add(a,b))
-    elif(c==2):
-        a=int(input("enter a value:"))
-        b=int(input("enter b value:"))
-        print(sub(a,b))
-    elif(c==3):
-        a=int(input("enter a value:"))
-        b=int(input("enter b value:"))
-        print(mul(a,b))
-    elif(c==4):
-        a=int(input("enter a value:"))
-        b=int(input("enter b value:"))
-        print(div(a,b))
-    else:
-        print("quit")
+    print("\n1. Add\n2. Sub\n3. Mul\n4. Div\n5. Exit")
+    c = int(input("Enter your choice (1-5): "))
 
-    
+    if c == 5:
+        print("Quit")
+        break
+
+    a = int(input("Enter a value: "))
+    b = int(input("Enter b value: "))
+
+    if c == 1:
+        print("Result:", add(a, b))
+    elif c == 2:
+        print("Result:", sub(a, b))
+    elif c == 3:
+        print("Result:", mul(a, b))
+    elif c == 4:
+        if b != 0:
+            print("Result:", div(a, b))
+        else:
+            print("Error: Division by zero is not allowed.")
+    else:
+        print("Invalid choice! Please enter between 1 and 5.")
